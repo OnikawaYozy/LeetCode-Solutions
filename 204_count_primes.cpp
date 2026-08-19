@@ -1,0 +1,1 @@
+class Solution { public: int countPrimes(int n) { if (n <= 2) return 0; vector<uint8_t> ans((n + 1) / 2, 1); int count = 1; for (int p = 3; p * p < n; p += 2) if (ans[p / 2]) for (int i = p * p; i <= n; i += 2 * p) ans[i / 2] = 0; for (int p = 3; p < n; p += 2) if (ans[p / 2]) count++; return count; }};

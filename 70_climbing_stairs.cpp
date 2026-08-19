@@ -1,0 +1,1 @@
+class Solution{public:int climbStairs(int n){int l1=1,l2=1;for(int i=2;i<=n;i++){int l3=l1+l2;l1=l2;l2=l3;}return l2;}};
